@@ -32,6 +32,10 @@ image_xscale = 20
 image_yscale = 20
 
 counter = 0
+
+rspeed = 5
+point_dir = 0
+is_Rotating = 0
 </string>
           </argument>
         </arguments>
@@ -60,20 +64,30 @@ key_right = keyboard_check(vk_right)
 
 if (key_left){
     if (counter == 0){
-        image_angle -= 90
-        counter = 20
+        point_dir = image_angle + 90
+        is_Rotating = 1
+        counter = 70
     }
+    
+
 }
 
 if (key_right){
     if (counter == 0){
-        image_angle += 90
-        counter = 20
+        point_dir = image_angle - 90
+        is_Rotating = 1
+        counter = 70
     }
+
 }
 
 if (counter &gt; 0){
     counter -= 1
+}
+
+if (is_Rotating == 1) //if its set to rotate the object
+{
+     image_angle += sin(degtorad(point_dir - image_angle)) * rspeed
 }
 </string>
           </argument>
