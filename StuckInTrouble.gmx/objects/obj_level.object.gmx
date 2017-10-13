@@ -35,7 +35,7 @@ counter = 0
 
 rspeed = 5
 point_dir = 0
-is_Rotating = 0
+is_rotating = 0
 </string>
           </argument>
         </arguments>
@@ -62,31 +62,30 @@ is_Rotating = 0
 key_left = keyboard_check(vk_left)
 key_right = keyboard_check(vk_right)
 
-if (key_left){
-    if (counter == 0){
+if key_left {
+    if counter == 0 {
         point_dir = image_angle + 90
-        is_Rotating = 1
+        is_rotating = 1
         counter = 90
     }
     
 
 }
 
-if (key_right){
-    if (counter == 0){
+if key_right {
+    if counter == 0 {
         point_dir = image_angle - 90
-        is_Rotating = 1
+        is_rotating = 1
         counter = 90
     }
 
 }
 
-if (counter &gt; 0){
+if counter &gt; 0 {
     counter -= 1
 }
 
-if (is_Rotating == 1) //if its set to rotate the object
-{
+if is_rotating == 1{
      image_angle += sin(degtorad(point_dir - image_angle)) * rspeed
 }
 </string>
