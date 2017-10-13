@@ -78,16 +78,19 @@ if key_right {
         is_rotating = 1
         counter = 90
     }
-
 }
 
 if counter &gt; 0 {
     counter -= 1
+} else if counter == 0 {
+    is_rotating = 0
 }
 
-if is_rotating == 1{
+if is_rotating == 1 {
      image_angle += sin(degtorad(point_dir - image_angle)) * rspeed
 }
+
+show_debug_message(is_rotating)
 </string>
           </argument>
         </arguments>

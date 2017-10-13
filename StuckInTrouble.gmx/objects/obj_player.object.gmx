@@ -28,7 +28,7 @@
             <string>grav = 0.2
 speed_hor = 0
 speed_ver = 0
-speed_jump = 3
+speed_jump = 6
 speed_move = 4
 
 friction = 0.4
@@ -76,6 +76,10 @@ x = max(x, 0 + (sprite_width / 2))
 
 if speed_ver &lt; 10 {
     speed_ver += grav
+}
+
+if (place_meeting(x, y + 1, obj_level)) and (key_jump){
+    speed_ver = -speed_jump
 }
 
 // Horizontal Collision
