@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction = 0.2
+            <string>grav = 0.2
+speed_hor = 0
+speed_ver = 0
+speed_jump = 3
+speed_move = 4
+
+friction = 0.4
 
 image_xscale = 5
 image_yscale = 5
@@ -57,13 +63,38 @@ key_jump = keyboard_check_pressed(vk_space)
 
 if (key_right) {
     // x += 5
-    motion_set(0, 5)
+    motion_set(0, speed_move)
 }
 
 if (key_left) {
     // x -= 5
-    motion_set(-180, 5)
+    motion_set(-180, speed_move)
 }
+
+x = min(x, room_width - (sprite_width / 2))
+x = max(x, 0 + (sprite_width / 2))
+
+// Horizotal Collision
+if (place_meeting(x + speed_hor, y, obj_level)){
+    while (not place_meeting(x + sign(speed_hor), y, obj_level)){
+        x += sign(speed_hor)
+    }
+    speed_hor = 0
+}
+x += speed_hor
+
+/*if (speed_ver &lt; 10){
+    speed_ver += grav
+}
+
+// Vertical Collision
+if (place_meeting(x, y + speed_ver, obj_level)){
+    while (not place_meeting(x, y + sign(speed_ver), obj_level)){
+        y += sign(speed_ver)
+    }
+    speed_ver = 0
+}
+y += speed_ver*/
 </string>
           </argument>
         </arguments>
