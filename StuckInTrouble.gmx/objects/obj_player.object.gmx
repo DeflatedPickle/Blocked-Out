@@ -74,27 +74,27 @@ if (key_left) {
 x = min(x, room_width - (sprite_width / 2))
 x = max(x, 0 + (sprite_width / 2))
 
-// Horizotal Collision
-if (place_meeting(x + speed_hor, y, obj_level)){
-    while (not place_meeting(x + sign(speed_hor), y, obj_level)){
+if (speed_ver &lt; 10){
+    speed_ver += grav
+}
+
+// Horizontal Collision
+if (place_meeting(x + speed_hor, y, obj_level)) {
+    while(not place_meeting(x + sign(speed_hor), y, obj_level)) {
         x += sign(speed_hor)
     }
     speed_hor = 0
 }
 x += speed_hor
 
-/*if (speed_ver &lt; 10){
-    speed_ver += grav
-}
-
-// Vertical Collision
-if (place_meeting(x, y + speed_ver, obj_level)){
-    while (not place_meeting(x, y + sign(speed_ver), obj_level)){
+// Vetical Collision
+if (place_meeting(x, y + speed_ver, obj_level)) {
+    while(not place_meeting(x, y + sign(speed_ver), obj_level)) {
         y += sign(speed_ver)
     }
     speed_ver = 0
 }
-y += speed_ver*/
+y += speed_ver
 </string>
           </argument>
         </arguments>
