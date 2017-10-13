@@ -35,6 +35,9 @@ friction = 0.4
 
 image_xscale = 5
 image_yscale = 5
+
+// Global Variables
+global.player = id
 </string>
           </argument>
         </arguments>
@@ -57,15 +60,18 @@ image_yscale = 5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.is_rotating {
+            <string>/*if global.is_rotating {
     exit
-}
+}*/
 
 key_right = keyboard_check(ord("D"))
-key_left = keyboard_check(ord("A"))
+key_left = -keyboard_check(ord("A"))
 key_jump = keyboard_check_pressed(vk_space)
 
-if key_right {
+move_dir = key_left + key_right
+speed_hor = move_dir * speed_move
+
+/*if key_right {
     // x += 5
     motion_set(0, speed_move)
 }
@@ -73,7 +79,7 @@ if key_right {
 if key_left {
     // x -= 5
     motion_set(-180, speed_move)
-}
+}*/
 
 x = min(x, room_width - (sprite_width / 2))
 x = max(x, 0 + (sprite_width / 2))
@@ -82,22 +88,25 @@ if speed_ver &lt; 10 {
     speed_ver += grav
 }
 
-if (place_meeting(x, y + 1, obj_level)) and (key_jump){
+if place_meeting(x, y + 1, obj_level) and key_jump {
     speed_ver = -speed_jump
 }
 
 // Horizontal Collision
 if place_meeting(x + speed_hor, y, obj_level) {
-    while(not place_meeting(x + sign(speed_hor), y, obj_level)) {
+    while not place_meeting(x + sign(speed_hor), y, obj_level) {
         x += sign(speed_hor)
     }
     speed_hor = 0
 }
 x += speed_hor
+if place_meeting(x, y, obj_level) {
+    x -= sign(speed_hor)
+}
 
 // Vetical Collision
 if place_meeting(x, y + speed_ver, obj_level) {
-    while(not place_meeting(x, y + sign(speed_ver), obj_level)) {
+    while not place_meeting(x, y + sign(speed_ver), obj_level) {
         y += sign(speed_ver)
     }
     speed_ver = 0

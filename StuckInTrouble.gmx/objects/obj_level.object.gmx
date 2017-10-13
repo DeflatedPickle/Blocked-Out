@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Do some stuff to the level
-image_speed = 0
+            <string>image_speed = 0
 
 image_xscale = 50
 image_yscale = 50
@@ -64,6 +63,8 @@ key_right = keyboard_check(vk_right)
 
 if key_left {
     if counter == 0 {
+        global.player.speed_ver = -7
+        
         point_dir = image_angle + 90
         global.is_rotating = 1
         counter = 90
@@ -74,6 +75,8 @@ if key_left {
 
 if key_right {
     if counter == 0 {
+        global.player.speed_ver = -7
+        
         point_dir = image_angle - 90
         global.is_rotating = 1
         counter = 90
