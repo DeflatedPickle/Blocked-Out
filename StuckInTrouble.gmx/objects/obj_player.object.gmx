@@ -57,7 +57,11 @@ image_yscale = 5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_right = keyboard_check(ord("D"))
+            <string>if global.is_rotating {
+    exit
+}
+
+key_right = keyboard_check(ord("D"))
 key_left = keyboard_check(ord("A"))
 key_jump = keyboard_check_pressed(vk_space)
 

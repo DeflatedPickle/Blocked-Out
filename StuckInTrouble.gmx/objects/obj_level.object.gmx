@@ -35,7 +35,7 @@ counter = 0
 
 rspeed = 5
 point_dir = 0
-is_rotating = 0
+global.is_rotating = 0
 </string>
           </argument>
         </arguments>
@@ -65,7 +65,7 @@ key_right = keyboard_check(vk_right)
 if key_left {
     if counter == 0 {
         point_dir = image_angle + 90
-        is_rotating = 1
+        global.is_rotating = 1
         counter = 90
     }
     
@@ -75,7 +75,7 @@ if key_left {
 if key_right {
     if counter == 0 {
         point_dir = image_angle - 90
-        is_rotating = 1
+        global.is_rotating = 1
         counter = 90
     }
 }
@@ -83,14 +83,12 @@ if key_right {
 if counter &gt; 0 {
     counter -= 1
 } else if counter == 0 {
-    is_rotating = 0
+    global.is_rotating = 0
 }
 
-if is_rotating == 1 {
+if global.is_rotating == 1 {
      image_angle += sin(degtorad(point_dir - image_angle)) * rspeed
 }
-
-show_debug_message(is_rotating)
 </string>
           </argument>
         </arguments>
