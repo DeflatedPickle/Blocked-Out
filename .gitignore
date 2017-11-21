@@ -32,3 +32,9 @@ sysinfo.txt
 # Builds
 .apk
 .unitypackage
+
+StuckInTrouble/packages/
+StuckInTrouble/Assets/Plugins
+
+.idea/
+*.meta
