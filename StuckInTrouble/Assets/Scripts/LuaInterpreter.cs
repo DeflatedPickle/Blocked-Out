@@ -7,21 +7,14 @@ using UnityEngine;
 public class LuaInterpreter : MonoBehaviour {
 	private Script _luaScript;
 
-	// Use this for initialization
 	private void Start () {
 		_luaScript = new Script();
 		Script.DefaultOptions.ScriptLoader = new EmbeddedResourcesScriptLoader();
 
-		Load("return 123");
-	}
-	
-	// Update is called once per frame
-	private void Update () {
+		var filePath = System.IO.Path.Combine(Application.streamingAssetsPath, "Lua");
+		filePath = System.IO.Path.Combine(filePath, "TestLua.lua");
 		
-	}
-
-	public void Load(string luaCode) {
-		DynValue result = _luaScript.DoString(luaCode);
-		Debug.Log(result.Number);
+		var luaCode = System.IO.File.ReadAllText(filePath);
+		Debug.Log(_luaScript.DoString(luaCode).String);
 	}
 }
