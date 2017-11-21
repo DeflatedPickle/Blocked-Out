@@ -36,5 +36,7 @@ sysinfo.txt
 StuckInTrouble/packages/
 StuckInTrouble/Assets/Plugins
 
+bin/
+
 .idea/
 *.meta
