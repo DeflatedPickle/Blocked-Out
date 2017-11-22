@@ -33,7 +33,7 @@ sysinfo.txt
 .apk
 .unitypackage
 
-StuckInTrouble/packages/
+StuckInTrouble/Assets/packages/
 StuckInTrouble/Assets/Plugins
 
 bin/
