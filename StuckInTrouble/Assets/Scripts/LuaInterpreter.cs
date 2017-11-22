@@ -15,7 +15,8 @@ public class LuaInterpreter : MonoBehaviour {
 
 		var filePath = System.IO.Path.Combine(Main.LuaPath, "TestLua.lua");
 		
-		var luaCode = System.IO.File.ReadAllText(filePath);
+		//var luaCode = System.IO.File.ReadAllText(filePath);
+		var luaCode = "printf(\"Lua Version: %s\", _VERSION)";
 		Run(luaCode);
 	}
 
