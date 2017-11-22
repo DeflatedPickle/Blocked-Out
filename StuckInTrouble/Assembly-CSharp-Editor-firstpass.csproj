@@ -170,6 +170,24 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/DeflatedPickle/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.ExtensionAttribute">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/Microsoft.Scripting.ExtensionAttribute.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Core">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/Microsoft.Scripting.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

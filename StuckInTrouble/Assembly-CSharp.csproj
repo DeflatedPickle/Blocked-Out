@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\LuaInterpreter.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\PythonInterpreter.cs" />
     <Reference Include="Facebook.Unity.Settings">
       <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
@@ -92,6 +93,24 @@
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/DeflatedPickle/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.ExtensionAttribute">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/Microsoft.Scripting.ExtensionAttribute.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Core">
+      <HintPath>C:/Users/DeflatedPickle/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/Plugins/IronPython/Microsoft.Scripting.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
