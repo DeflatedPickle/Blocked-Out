@@ -11,8 +11,8 @@ public class PythonInterpreter : MonoBehaviour {
 	private void Start () {
 		_pythonScript = Python.CreateEngine();
 		_pythonScope = _pythonScript.CreateScope();
-
-		var pythonCode = "import sys;print 'Python Version: %s' % sys.version";
+		
+		var pythonCode = System.IO.File.ReadAllText(System.IO.Path.Combine(Main.PythonPath, "TestPython.py"));
 		Run(pythonCode);
 	}
 

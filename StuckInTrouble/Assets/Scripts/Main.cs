@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class Main : MonoBehaviour {
 	public static string LuaPath;
+	public static string PythonPath;
 
 	private void Awake() {
 		LuaPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Lua");
+		PythonPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Python");
 	}
 
 	private void Start() {
