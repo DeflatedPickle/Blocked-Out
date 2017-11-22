@@ -37,6 +37,9 @@ public class PythonInterpreter : MonoBehaviour {
 		Debug.Log(result.ToString());
 	}
 	
+	/* Credit: seshapv
+	 * Link: https://blogs.msdn.microsoft.com/seshadripv/2008/07/08/how-to-redirect-output-from-python-using-the-dlr-hosting-api/
+	 */
 	private static string ReadFromStream(MemoryStream stream) {
 		var length = (int)stream.Length;
 		var bytes = new byte[length];
@@ -44,6 +47,6 @@ public class PythonInterpreter : MonoBehaviour {
 		stream.Seek(0, SeekOrigin.Begin);
 		stream.Read(bytes, 0, (int)stream.Length);
  
-		return Encoding.GetEncoding("utf-8").GetString(bytes, 0, (int)stream.Length-1);
+		return Encoding.GetEncoding("utf-8").GetString(bytes, 0, (int)stream.Length - 1);
 	}
 }
