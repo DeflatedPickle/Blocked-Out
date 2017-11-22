@@ -13,10 +13,10 @@ public class LuaInterpreter : MonoBehaviour {
 		
 		_luaScript = new Script();
 
-		var filePath = System.IO.Path.Combine(Main.LuaPath, "TestLua.lua");
+		//var filePath = System.IO.Path.Combine(Main.LuaPath, "TestLua.lua");
 		
 		//var luaCode = System.IO.File.ReadAllText(filePath);
-		var luaCode = "printf(\"Lua Version: %s\", _VERSION)";
+		var luaCode = "print(string.format('Lua Version: %s', _VERSION))";
 		Run(luaCode);
 	}
 
