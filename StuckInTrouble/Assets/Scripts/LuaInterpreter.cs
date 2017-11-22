@@ -11,8 +11,7 @@ public class LuaInterpreter : MonoBehaviour {
 		_luaScript = new Script();
 		Script.DefaultOptions.ScriptLoader = new EmbeddedResourcesScriptLoader();
 
-		var filePath = System.IO.Path.Combine(Application.streamingAssetsPath, "Lua");
-		filePath = System.IO.Path.Combine(filePath, "TestLua.lua");
+		var filePath = System.IO.Path.Combine(Main.LuaPath, "TestLua.lua");
 		
 		var luaCode = System.IO.File.ReadAllText(filePath);
 		Log(luaCode);
