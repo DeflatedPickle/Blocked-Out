@@ -1,1 +1,1 @@
-return "Lua interpreter is working!"
+print("Lua interpreter is working!")

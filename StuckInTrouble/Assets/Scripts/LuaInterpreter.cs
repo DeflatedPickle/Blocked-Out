@@ -8,13 +8,16 @@ public class LuaInterpreter : MonoBehaviour {
 	private Script _luaScript;
 
 	private void Start () {
-		_luaScript = new Script();
 		Script.DefaultOptions.ScriptLoader = new EmbeddedResourcesScriptLoader();
+		Script.DefaultOptions.DebugPrint = Debug.Log;
+		
+		_luaScript = new Script();
 
 		var filePath = System.IO.Path.Combine(Main.LuaPath, "TestLua.lua");
 		
 		var luaCode = System.IO.File.ReadAllText(filePath);
-		Log(luaCode);
+		// Log(luaCode);
+		Run(luaCode);
 	}
 
 	public DynValue Run(string luaCode) {
