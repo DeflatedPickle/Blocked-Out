@@ -12,11 +12,8 @@ public class LuaInterpreter : MonoBehaviour {
 		Script.DefaultOptions.DebugPrint = Debug.Log;
 		
 		_luaScript = new Script();
-
-		//var filePath = System.IO.Path.Combine(Main.LuaPath, "TestLua.lua");
 		
-		//var luaCode = System.IO.File.ReadAllText(filePath);
-		var luaCode = "print(string.format('Lua Version: %s', _VERSION))";
+		var luaCode = System.IO.File.ReadAllText(System.IO.Path.Combine(Main.LuaPath, "TestLua.lua"));
 		Run(luaCode);
 	}
 

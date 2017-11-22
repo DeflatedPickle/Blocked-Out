@@ -6,9 +6,11 @@ using UnityEngine;
 public class Main : MonoBehaviour {
 	public static string LuaPath;
 
-	private void Start () {
-		Debug.Log(string.Format(".NET Version: {0}", Environment.Version));
-		
+	private void Awake() {
 		LuaPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Lua");
+	}
+
+	private void Start() {
+		Debug.Log(string.Format(".NET Version: {0}", Environment.Version));
 	}
 }
