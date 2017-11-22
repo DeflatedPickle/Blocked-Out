@@ -13,6 +13,7 @@ public class Main : MonoBehaviour {
 	}
 
 	private void Start() {
+		Debug.Log(string.Format("Unity Version: {0}", Application.unityVersion));
 		Debug.Log(string.Format(".NET Version: {0}", Environment.Version));
 	}
 }
