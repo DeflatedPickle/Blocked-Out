@@ -420,11 +420,17 @@
     <Reference Include="IronPython">
       <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronPython.2.7.7/lib/Net35/IronPython.dll</HintPath>
     </Reference>
+    <Reference Include="IronRuby">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronRuby.1.1.3/Lib/IronRuby.dll</HintPath>
+    </Reference>
     <Reference Include="Json.WindowsPhone">
       <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/wp/Json.WindowsPhone.dll</HintPath>
     </Reference>
     <Reference Include="IronPython.Modules">
       <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronPython.2.7.7/lib/Net35/IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronRuby.1.1.3/Lib/IronRuby.Libraries.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.Core">
       <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/FSharp.Core.4.1.18/lib/net20/FSharp.Core.dll</HintPath>
@@ -489,6 +495,36 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
