@@ -1,1 +1,1 @@
-print("Lua interpreter is working!")
+print(string.format('Lua Version: %s', _VERSION))
