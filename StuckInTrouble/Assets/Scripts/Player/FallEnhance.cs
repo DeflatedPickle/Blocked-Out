@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
 namespace Player {
+	/*
+	 * Credit: Board To Bits Games
+	 */
 	public class FallEnhance : MonoBehaviour {
 		public float FallMultiplier = 3f;
 		public float LowJumpMultiplier = 2f;
