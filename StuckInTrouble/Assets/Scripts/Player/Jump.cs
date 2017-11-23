@@ -7,7 +7,7 @@ namespace Player {
 	 */
 	public class Jump : MonoBehaviour {
 		[Range(0, 10)]
-		public float JumpVelocity;
+		public float JumpVelocity = 5;
 
 		private void Update() {
 			if (Input.GetKeyDown(KeyCode.Space)) {
