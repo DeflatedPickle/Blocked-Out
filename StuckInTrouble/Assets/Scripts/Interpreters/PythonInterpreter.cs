@@ -34,7 +34,8 @@ public class PythonInterpreter {
         Debug.Log(result.ToString());
     }
 
-    /* Credit: seshapv
+    /*
+     * Credit: seshapv
      * Link: https://blogs.msdn.microsoft.com/seshadripv/2008/07/08/how-to-redirect-output-from-python-using-the-dlr-hosting-api/
      */
     private static string ReadFromStream(MemoryStream stream) {
