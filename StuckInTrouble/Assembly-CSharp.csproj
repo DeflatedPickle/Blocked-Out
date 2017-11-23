@@ -50,9 +50,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\LuaInterpreter.cs" />
+    <Compile Include="Assets\Scripts\Interpreters\LuaInterpreter.cs" />
+    <Compile Include="Assets\Scripts\Interpreters\PythonInterpreter.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
-    <Compile Include="Assets\Scripts\PythonInterpreter.cs" />
+    <Compile Include="Assets\Scripts\Player\FallEnhance.cs" />
+    <Compile Include="Assets\Scripts\Player\Jump.cs" />
+    <Compile Include="Assets\Scripts\Player\Move.cs" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Net35\Microsoft.Scripting.AspNet.xml" />
     <None Include="Assets\packages\Microsoft.CSharp.4.4.0\ref\netcore50\ru\Microsoft.CSharp.xml" />
     <None Include="Assets\packages\IronPython.2.7.7\lib\Net35\IronPython.xml" />
@@ -135,44 +138,44 @@
     <Reference Include="UnityEngine.VR">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
     </Reference>
-    <Reference Include="IronPython">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronPython.2.7.7/lib/Net35/IronPython.dll</HintPath>
-    </Reference>
-    <Reference Include="Json.WindowsPhone">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/wp/Json.WindowsPhone.dll</HintPath>
-    </Reference>
-    <Reference Include="IronPython.Modules">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronPython.2.7.7/lib/Net35/IronPython.Modules.dll</HintPath>
-    </Reference>
-    <Reference Include="Json.Silverlight4">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/sl4/Json.Silverlight4.dll</HintPath>
-    </Reference>
-    <Reference Include="MoonSharp.Interpreter">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/MoonSharp.2.0.0.0/lib/net35-client/MoonSharp.Interpreter.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Dynamic">
       <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/DynamicLanguageRuntime.1.1.2/lib/Net35/Microsoft.Dynamic.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Scripting.Metadata">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/DynamicLanguageRuntime.1.1.2/lib/Net35/Microsoft.Scripting.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Scripting.AspNet">
       <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/DynamicLanguageRuntime.1.1.2/lib/Net35/Microsoft.Scripting.AspNet.dll</HintPath>
     </Reference>
-    <Reference Include="Json.Silverlight">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/sl3/Json.Silverlight.dll</HintPath>
-    </Reference>
-    <Reference Include="Json.Net35">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/net35/Json.Net35.dll</HintPath>
+    <Reference Include="Microsoft.Scripting.Core">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/DynamicLanguageRuntime.1.1.2/lib/Net35/Microsoft.Scripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Scripting">
       <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/DynamicLanguageRuntime.1.1.2/lib/Net35/Microsoft.Scripting.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Scripting.Core">
-      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/DynamicLanguageRuntime.1.1.2/lib/Net35/Microsoft.Scripting.Core.dll</HintPath>
+    <Reference Include="Microsoft.Scripting.Metadata">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/DynamicLanguageRuntime.1.1.2/lib/Net35/Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronPython.2.7.7/lib/Net35/IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronPython.2.7.7/lib/Net35/IronPython.Modules.dll</HintPath>
     </Reference>
     <Reference Include="IronPython.SQLite">
       <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/IronPython.2.7.7/lib/Net35/IronPython.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Json.Net35">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/net35/Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="Json.Silverlight">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/sl3/Json.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="Json.Silverlight4">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/sl4/Json.Silverlight4.dll</HintPath>
+    </Reference>
+    <Reference Include="Json.WindowsPhone">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/JSON.1.0.1/lib/wp/Json.WindowsPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="MoonSharp.Interpreter">
+      <HintPath>C:/Users/PabloPatato/Documents/GitHub/Stuck-In-Trouble/StuckInTrouble/Assets/packages/MoonSharp.2.0.0.0/lib/net35-client/MoonSharp.Interpreter.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
