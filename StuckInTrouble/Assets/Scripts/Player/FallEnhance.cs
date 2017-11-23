@@ -3,9 +3,12 @@
 namespace Player {
 	/*
 	 * Credit: Board To Bits Games
+	 * Link: https://www.youtube.com/watch?v=7KiK0Aqtmzc
 	 */
 	public class FallEnhance : MonoBehaviour {
+		[Range(0, 10)]
 		public float FallMultiplier = 3f;
+		[Range(0, 5)]
 		public float LowJumpMultiplier = 2f;
 
 		private Rigidbody2D _rigidbody2D;

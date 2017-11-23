@@ -3,8 +3,10 @@
 namespace Player {
 	/*
 	 * Credit: Board To Bits Games
+	 * Link: https://www.youtube.com/watch?v=7KiK0Aqtmzc
 	 */
 	public class Jump : MonoBehaviour {
+		[Range(0, 10)]
 		public float JumpVelocity;
 
 		private void Update() {
