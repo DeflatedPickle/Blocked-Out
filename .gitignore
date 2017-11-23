@@ -40,3 +40,7 @@ bin/
 
 .idea/
 *.meta
+
+*.dll
+*.exe
+*.nupkg
