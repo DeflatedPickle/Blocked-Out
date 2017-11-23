@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 
 namespace Player {
+	/*
+	 * Credit: Unity
+	 * Link: https://unity3d.com/learn/tutorials/topics/2d-game-creation/creating-basic-platformer-game
+	 */
 	public class Move : MonoBehaviour {
 		public float MoveForce = 365f;
 		public float MaxSpeed = 5f;
