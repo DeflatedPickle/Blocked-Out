@@ -4,38 +4,35 @@ using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Loaders;
 using UnityEngine;
 
-public class LuaInterpreter : MonoBehaviour {
-	private Script _luaScript;
+public class LuaInterpreter {
+    private static readonly Script LuaScript;
 
-	private void Start () {
-		Script.DefaultOptions.ScriptLoader = new EmbeddedResourcesScriptLoader();
-		Script.DefaultOptions.DebugPrint = Debug.Log;
-		
-		_luaScript = new Script();
-		
-		var luaCode = System.IO.File.ReadAllText(System.IO.Path.Combine(Main.LuaPath, "TestLua.lua"));
-		Run(luaCode);
-	}
+    static LuaInterpreter() {
+        Script.DefaultOptions.ScriptLoader = new EmbeddedResourcesScriptLoader();
+        Script.DefaultOptions.DebugPrint = Debug.Log;
 
-	public DynValue Run(string luaCode) {
-		return _luaScript.DoString(luaCode);
-	}
+        LuaScript = new Script();
+    }
 
-	public void Log(string luaCode) {
-		var result = Run(luaCode);
+    public DynValue Run(string luaCode) {
+        return LuaScript.DoString(luaCode);
+    }
 
-		switch (result.Type) {
-			case DataType.String:
-				Debug.Log(result.String);
-				break;
-				
-			case DataType.Number:
-				Debug.Log(result.Number);
-				break;
-				
-			case DataType.Boolean:
-				Debug.Log(result.Boolean);
-				break;
-		}
-	}
+    public void Log(string luaCode) {
+        var result = Run(luaCode);
+
+        switch (result.Type) {
+            case DataType.String:
+                Debug.Log(result.String);
+                break;
+
+            case DataType.Number:
+                Debug.Log(result.Number);
+                break;
+
+            case DataType.Boolean:
+                Debug.Log(result.Boolean);
+                break;
+        }
+    }
 }
