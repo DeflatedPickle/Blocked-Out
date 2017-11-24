@@ -9,6 +9,7 @@ using UnityEngine;
 public class Main : MonoBehaviour {
 	internal static readonly string LuaPath;
 	internal static readonly string PythonPath;
+	internal static readonly string ModPath;
 
 	public static readonly LuaInterpreter Lua;
 	public static readonly PythonInterpreter Python;
@@ -16,6 +17,7 @@ public class Main : MonoBehaviour {
 	static Main() {
 		LuaPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Lua");
 		PythonPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Python");
+		ModPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Mods");
 		
 		Debug.Log(string.Format("Unity Version: {0}", Application.unityVersion));
 		Debug.Log(string.Format(".NET Version: {0}", Environment.Version));
