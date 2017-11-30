@@ -10,3 +10,23 @@ Python is used for scripts that need to use C# code. Mods will also be written i
 
 ### Lua:
 Lua is used for scripts that do not need to use C#.
+
+## Level Concept:
+```json
+{
+    "name": "MyLevel",
+    "background": "green",
+    "tiles": [
+        ["x", "x", "x", "x", "x", "x", "x", "x"],
+        ["x", "x", " ", " ", " ", " ", " ", "x"],
+        ["x", " ", " ", " ", " ", " ", " ", "x"],
+        ["x", " ", " ", " ", " ", "x", "x", "x"],
+        ["x", " ", " ", " ", " ", " ", "x", "x"],
+        ["x", "x", " ", " ", " ", " ", " ", "x"],
+        ["x", "x", "x", " ", " ", " ", " ", "x"],
+        ["x", "x", "x", "x", "x", "x", "x", "x"],
+    ],
+    "block": "x",
+    "air": " ",
+}
+```
