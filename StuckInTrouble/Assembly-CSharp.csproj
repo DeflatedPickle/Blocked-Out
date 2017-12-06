@@ -60,11 +60,10 @@
     <Compile Include="Assets\2DLightAsset\Scripts\rotate.cs" />
     <Compile Include="Assets\Scripts\Interpreters\LuaInterpreter.cs" />
     <Compile Include="Assets\Scripts\Interpreters\PythonInterpreter.cs" />
+    <Compile Include="Assets\Scripts\Player\Animations.cs" />
     <Compile Include="Assets\Scripts\Player\FallEnhance.cs" />
     <Compile Include="Assets\Scripts\Player\Jump.cs" />
     <Compile Include="Assets\Scripts\Player\Move.cs" />
-    <Compile Include="Assets\Scripts\Player\Squash.cs" />
-    <Compile Include="Assets\Scripts\Player\Stretch.cs" />
     <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Net35\Microsoft.Dynamic.xml" />
     <None Include="Assets\packages\IronPython.2.7.7\lib\Net35\IronPython.xml" />
