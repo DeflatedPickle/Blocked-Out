@@ -8,14 +8,12 @@ public class Jump : MonoBehaviour {
 	[Range(0, 10)]
 	public float JumpVelocity = 5;
 
-	private bool _isGrounded = false;
+	private bool _isGrounded;
 	
 	private Rigidbody2D _rigidbody2D;
-	private PolygonCollider2D _polygonCollider2D;
 
 	private void Awake() {
 		_rigidbody2D = GetComponent<Rigidbody2D>();
-		_polygonCollider2D = GetComponent<PolygonCollider2D>();
 	}
 
 	private void Update() {
