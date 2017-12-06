@@ -62,6 +62,7 @@
     <None Include="Assets\packages\Microsoft.CSharp.4.4.0\ref\netstandard1.0\es\Microsoft.CSharp.xml" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.AspNet.xml" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Sl5\Microsoft.Dynamic.xml" />
+    <None Include="Assets\2DLightAsset\Shaders\Gradient-NoTexture-Radial-SingleColor-ToTransparent-RegularUV-AlphaBlend.shader" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.Metadata.xml" />
     <None Include="Assets\packages\IronPython.2.7.7\lib\Net45\IronPython.Modules.xml" />
     <None Include="Assets\packages\Microsoft.CSharp.4.4.0\ref\netstandard1.0\ru\Microsoft.CSharp.xml" />
@@ -72,6 +73,7 @@
     <None Include="Assets\packages\MoonSharp.2.0.0.0\lib\net40-client\MoonSharp.Interpreter.xml" />
     <None Include="Assets\packages\Microsoft.CSharp.4.4.0\ref\netcore50\de\Microsoft.CSharp.xml" />
     <None Include="Assets\packages\MoonSharp.2.0.0.0\lib\netcore\MoonSharp.Interpreter.xml" />
+    <None Include="Assets\2DLightAsset\Shaders\NoTexture.shader" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Net35\Microsoft.Scripting.AspNet.xml" />
     <None Include="Assets\packages\MoonSharp.2.0.0.0\lib\netstandard1.6\MoonSharp.Interpreter.xml" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Scripting.AspNet.xml" />
@@ -97,6 +99,7 @@
     <None Include="Assets\packages\Microsoft.CSharp.4.4.0\ref\netcore50\it\Microsoft.CSharp.xml" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.xml" />
     <None Include="Assets\packages\DynamicLanguageRuntime.1.1.2\lib\Net35\Microsoft.Scripting.Metadata.xml" />
+    <None Include="Assets\2DLightAsset\Shaders\Gradient-ZFighting.shader" />
     <None Include="Assets\packages\Microsoft.CSharp.4.4.0\ref\netstandard1.0\fr\Microsoft.CSharp.xml" />
     <None Include="Assets\packages\Microsoft.CSharp.4.4.0\ref\netstandard1.0\ko\Microsoft.CSharp.xml" />
     <None Include="Assets\packages\Microsoft.CSharp.4.4.0\ref\netstandard1.0\zh-hant\Microsoft.CSharp.xml" />
