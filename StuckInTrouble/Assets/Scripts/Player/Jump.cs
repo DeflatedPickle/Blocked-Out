@@ -11,11 +11,11 @@ public class Jump : MonoBehaviour {
 	private bool _isGrounded;
 	
 	private Rigidbody2D _rigidbody2D;
-	private Animations _animations;
+	private AnimationManager _animationManager;
 
 	private void Awake() {
 		_rigidbody2D = GetComponent<Rigidbody2D>();
-		_animations = GetComponent<Animations>();
+		_animationManager = GetComponent<AnimationManager>();
 	}
 
 	private void Update() {
@@ -27,7 +27,7 @@ public class Jump : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D other) {
 		if (!_isGrounded) {
-			_animations.Stretch(0.05f, 0.0f);
+			_animationManager.Stretch(0.05f, 0.0f);
 		}
 		
 		if (other.gameObject.CompareTag("Ground")) {
@@ -37,7 +37,7 @@ public class Jump : MonoBehaviour {
 
 	private void OnCollisionExit2D(Collision2D other) {
 		if (_isGrounded) {
-			_animations.Squash(0.05f, 0.0f);
+			_animationManager.Squash(0.05f, 0.0f);
 		}
 		
 		_isGrounded = false;
