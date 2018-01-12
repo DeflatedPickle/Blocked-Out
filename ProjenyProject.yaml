@@ -1,6 +1,0 @@
-AssetsFolder:
-- 2DLightAsset
-ProjectSettingsPath: '[ProjectRoot]/ProjectSettings'
-TargetPlatforms:
-- Windows
-- UWP
