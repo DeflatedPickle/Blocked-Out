@@ -58,6 +58,7 @@
     <Compile Include="Assets\2DLightAsset\Scripts\Helpers\interface_touch2.cs" />
     <Compile Include="Assets\2DLightAsset\Scripts\Helpers\TablaSenoCoseno.cs" />
     <Compile Include="Assets\2DLightAsset\Scripts\rotate.cs" />
+    <Compile Include="Assets\Scripts\DebugInfo.cs" />
     <Compile Include="Assets\Scripts\Player\AnimationManager.cs" />
     <Compile Include="Assets\Scripts\Player\FallEnhance.cs" />
     <Compile Include="Assets\Scripts\Player\Jump.cs" />

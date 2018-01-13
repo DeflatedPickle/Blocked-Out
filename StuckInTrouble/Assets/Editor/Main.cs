@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 [InitializeOnLoad]
 public class Main : MonoBehaviour {

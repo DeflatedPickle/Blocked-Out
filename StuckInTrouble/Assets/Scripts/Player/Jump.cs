@@ -19,10 +19,11 @@ public class Jump : MonoBehaviour {
 	}
 
 	private void Update() {
-		
 		if (Input.GetKeyDown(KeyCode.Space) && _isGrounded) {
 			_rigidbody2D.velocity = Vector2.up * JumpVelocity;
 		}
+		
+		DebugInfo.AppendDebug(string.Format("Is Grounded? {0}", _isGrounded));
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {
