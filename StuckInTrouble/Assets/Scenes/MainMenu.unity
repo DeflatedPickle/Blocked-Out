@@ -615,7 +615,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Blocked Out
+  m_Text: Stuck In Trouble
 --- !u!222 &1173883746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2106171951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66219bdfabab933498bd8548a068a1a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 01026ab0479c89a4694c0d0b009623fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &2106171953

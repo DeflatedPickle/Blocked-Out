@@ -8,7 +8,7 @@ public class Jump : MonoBehaviour {
 	[Range(0, 10)]
 	public float JumpVelocity = 5;
 
-	public bool IsGrounded;
+	private bool _isGrounded;
 	
 	private Rigidbody2D _rigidbody2D;
 	private AnimationManager _animationManager;
@@ -19,28 +19,28 @@ public class Jump : MonoBehaviour {
 	}
 
 	private void Update() {
-		if (Input.GetKeyDown(KeyCode.Space) && IsGrounded) {
+		if (Input.GetKeyDown(KeyCode.Space) && _isGrounded) {
 			_rigidbody2D.velocity = Vector2.up * JumpVelocity;
 		}
 		
-		DebugInfo.AppendDebug(string.Format("Is Grounded? {0}", IsGrounded));
+		DebugInfo.AppendDebug(string.Format("Is Grounded? {0}", _isGrounded));
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {
-		if (!IsGrounded) {
+		if (!_isGrounded) {
 			_animationManager.Stretch(0.05f, 0.0f);
 		}
 		
 		if (other.gameObject.CompareTag("Ground")) {
-			IsGrounded = true;
+			_isGrounded = true;
 		}
 	}
 
 	private void OnCollisionExit2D(Collision2D other) {
-		if (IsGrounded) {
+		if (_isGrounded) {
 			_animationManager.Squash(0.05f, 0.0f);
 		}
 		
-		IsGrounded = false;
+		_isGrounded = false;
 	}
 }
