@@ -33,9 +33,9 @@ sysinfo.txt
 .apk
 .unitypackage
 
-StuckInTrouble/Assets/packages/
-StuckInTrouble/Assets/Plugins
-StuckInTrouble/Assets/2DLightAsset/
+BlockedOut/Assets/packages/
+BlockedOut/Assets/Plugins
+BlockedOut/Assets/2DLightAsset/
 
 bin/
 
