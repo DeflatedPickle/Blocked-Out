@@ -9,6 +9,8 @@ public class Jump : MonoBehaviour {
 	public float JumpVelocity = 5;
 
 	public bool IsGrounded;
+	public Transform Ground;
+	public LayerMask GroundLayerMask;
 	
 	private Rigidbody2D _rigidbody2D;
 	private AnimationManager _animationManager;
@@ -29,6 +31,8 @@ public class Jump : MonoBehaviour {
 		}
 		
 		DebugInfo.AppendDebug(string.Format("Is Grounded? {0}", IsGrounded));
+		
+		// IsGrounded = Physics2D.OverlapCircle(Ground.position, 0.15f, GroundLayerMask);
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {
