@@ -33,11 +33,12 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-.idea
-BlockedOut/Assets/packages
-BlockedOut/Assets/Plugins
-BlockedOut/Assets/2DLightAsset
-BlockedOut/Temp
-BlockedOut/obj
-BlockedOut/Library
+.idea/
+BlockedOut/Assets/packages/
+BlockedOut/Assets/Plugins/
+BlockedOut/Assets/2DLightAsset/
+BlockedOut/Assets/2DLightAsset.meta
+BlockedOut/Temp/
+BlockedOut/obj/
+BlockedOut/Library/
 dist/
