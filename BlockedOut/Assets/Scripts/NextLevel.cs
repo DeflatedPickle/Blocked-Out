@@ -10,6 +10,11 @@ public class NextLevel : MonoBehaviour {
 	public GameObject Text;
 
 	private int _count;
+	private AudioSource _exit;
+
+	private void Awake() {
+		_exit = GetComponent<AudioSource>();
+	}
 
 	private void Update() {
 		var sum = _count / (double) Wait;
@@ -23,6 +28,7 @@ public class NextLevel : MonoBehaviour {
 		
 		if (other.gameObject.CompareTag("Player")) {
 			if (_count == Wait) {
+				_exit.Play();
 				SceneManager.LoadScene(Scene);
 			}
 		}
