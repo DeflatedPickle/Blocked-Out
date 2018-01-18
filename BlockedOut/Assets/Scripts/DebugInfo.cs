@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DebugInfo : MonoBehaviour {
 	private Text _debugText;
 	private static readonly List<string> DebugString = new List<string>();
-	public static bool PrintDebug = true;
+	public bool PrintDebug = true;
 
     
 	private void Awake() {
