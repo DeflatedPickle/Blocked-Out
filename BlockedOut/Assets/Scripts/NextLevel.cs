@@ -15,7 +15,6 @@ public class NextLevel : MonoBehaviour {
 	private void Update() {
 		var sum = _count / (double) Wait;
 		Text.GetComponent<TextMesh>().text = sum * 100 + "%";
-		Debug.Log(sum);
 	}
 
 	private void OnTriggerStay2D(Collider2D other) {
