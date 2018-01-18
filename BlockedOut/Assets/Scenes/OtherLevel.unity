@@ -415,11 +415,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4732090743057172, guid: aadda9eef4d024b47b3157d23b6a479f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4732090743057172, guid: aadda9eef4d024b47b3157d23b6a479f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4732090743057172, guid: aadda9eef4d024b47b3157d23b6a479f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566ed0f96a9212446adb6dd807c62f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrintDebug: 1
+  PrintDebug: 0
 --- !u!114 &942816616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,7 +752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1126973114
 Transform:
   m_ObjectHideFlags: 0
@@ -968,15 +968,6 @@ Prefab:
       propertyPath: Text
       value: 
       objectReference: {fileID: 1126973113}
-    - target: {fileID: 60839563294917234, guid: 3adac9c6da8bd2642b391b7c37300359,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1641380643664398, guid: 3adac9c6da8bd2642b391b7c37300359, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3adac9c6da8bd2642b391b7c37300359, type: 2}
   m_IsPrefabParent: 0
