@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 	public List<GameObject> LevelList;
@@ -16,12 +17,17 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	public void NextLevel() {
-		LevelList[_index].SetActive(false);
+		if (_index < LevelList.Count - 1) {
+			LevelList[_index].SetActive(false);
 
-		_index += 1;
-		
-		LevelList[_index].SetActive(true);
-		// _player.transform.position = new Vector2(float.Parse(LevelSpawnList[_index].First().ToString()), float.Parse(LevelSpawnList[_index].Last().ToString()));
-		_player.transform.position = new Vector2(SpawnXList[_index], SpawnYList[_index]);
+			_index += 1;
+
+			LevelList[_index].SetActive(true);
+			// _player.transform.position = new Vector2(float.Parse(LevelSpawnList[_index].First().ToString()), float.Parse(LevelSpawnList[_index].Last().ToString()));
+			_player.transform.position = new Vector2(SpawnXList[_index], SpawnYList[_index]);
+		}
+		else {
+			SceneManager.LoadScene("MainMenu");
+		}
 	}
 }
