@@ -399,6 +399,9 @@ PolygonCollider2D:
       - {x: 0.015001196, y: -0.0050052637}
       - {x: 0.015010287, y: 0.0049759317}
       - {x: 0.03501145, y: 0.004978112}
+      - {x: 0.035270434, y: 0.022468546}
+      - {x: 0.04485093, y: 0.021258}
+      - {x: 0.03513306, y: 0.022662273}
       - {x: 0.03501461, y: 0.03499312}
       - {x: -0.04499822, y: 0.045000654}
       - {x: 0.045, y: 0.045}
@@ -731,7 +734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scene: NewScene
   Wait: 50
-  Text: {fileID: 0}
+  Text: {fileID: 1126973113}
 --- !u!1 &1126973113
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +968,15 @@ Prefab:
       propertyPath: Text
       value: 
       objectReference: {fileID: 1126973113}
+    - target: {fileID: 60839563294917234, guid: 3adac9c6da8bd2642b391b7c37300359,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641380643664398, guid: 3adac9c6da8bd2642b391b7c37300359, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3adac9c6da8bd2642b391b7c37300359, type: 2}
   m_IsPrefabParent: 0
