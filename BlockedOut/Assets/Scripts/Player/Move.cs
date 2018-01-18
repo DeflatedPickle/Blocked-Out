@@ -5,8 +5,12 @@
  * Link: https://unity3d.com/learn/tutorials/topics/2d-game-creation/creating-basic-platformer-game
  */
 public class Move : MonoBehaviour {
+	[Range(1, 365)]
 	public float MoveForce = 25f;
+	[Range(1, 10)]
 	public float MaxSpeed = 5f;
+	[Range(1, 5)]
+	public int JumpSpeed = 3;
 
 	private Rigidbody2D _rigidbody2D;
 	private Jump _jump;
@@ -20,10 +24,14 @@ public class Move : MonoBehaviour {
 		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) {
 			var horizontal = Input.GetAxis("Horizontal");
 
-			// IsGrounded bug needs to be fixed first.
-			/* if (!_jump.IsGrounded) {
-				MaxSpeed /= 2;
-			} */
+			if (!_jump.IsGrounded) {
+				if (MaxSpeed != 5f / 3) {
+					MaxSpeed /= 3;
+				}
+			}
+			else {
+				MaxSpeed = 5f;
+			}
 
 			if (horizontal * _rigidbody2D.velocity.x < MaxSpeed) {
 				_rigidbody2D.AddForce(Vector2.right * horizontal * MoveForce);

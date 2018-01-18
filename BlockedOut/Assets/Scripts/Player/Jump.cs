@@ -9,8 +9,6 @@ public class Jump : MonoBehaviour {
 	public float JumpVelocity = 5;
 
 	public bool IsGrounded;
-	public Transform Ground;
-	public LayerMask GroundLayerMask;
 	
 	private Rigidbody2D _rigidbody2D;
 	private AnimationManager _animationManager;
