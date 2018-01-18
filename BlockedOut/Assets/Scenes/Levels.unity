@@ -205,6 +205,12 @@ MonoBehaviour:
   LevelList:
   - {fileID: 585345870}
   - {fileID: 2095625087}
+  SpawnXList:
+  - -3
+  - -3
+  SpawnYList:
+  - -1
+  - -3
 --- !u!4 &143679830
 Transform:
   m_ObjectHideFlags: 0

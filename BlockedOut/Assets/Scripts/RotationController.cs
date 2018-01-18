@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RotationController : MonoBehaviour {
-	private RotationManager _rotationManager;
+	// private RotationManager _rotationManager;
 	private AudioSource _audioSource;
 	
 	private float _desiredRot;
@@ -11,7 +11,7 @@ public class RotationController : MonoBehaviour {
 	public float Damping = 3;
 
 	private void Awake() {
-		_rotationManager = GetComponent<RotationManager>();
+		// _rotationManager = GetComponent<RotationManager>();
 		_audioSource = GetComponent<AudioSource>();
 	}
  
