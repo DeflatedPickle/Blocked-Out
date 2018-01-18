@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour {
-	public string Scene;
+	// public string Scene;
 	[Range(0, 100)]
 	public int Wait = 35;
 	public GameObject Text;
@@ -13,11 +13,13 @@ public class NextLevel : MonoBehaviour {
 	private TextMesh _text;
 	private AudioSource _exit;
 	private AudioSource _countSound;
+	private LevelManager _levelManager;
 
 	private void Awake() {
 		_text = Text.GetComponent<TextMesh>();
 		_exit = GetComponents<AudioSource>()[0];
 		_countSound = GetComponents<AudioSource>()[1];
+		_levelManager = GameObject.Find("Manager").GetComponent<LevelManager>();
 	}
 
 	private void Update() {
@@ -34,7 +36,8 @@ public class NextLevel : MonoBehaviour {
 		if (other.gameObject.CompareTag("Player")) {
 			if (_count == Wait) {
 				_exit.Play();
-				SceneManager.LoadScene(Scene);
+				// SceneManager.LoadScene(Scene);
+				_levelManager.NextLevel();
 			}
 		}
 	}

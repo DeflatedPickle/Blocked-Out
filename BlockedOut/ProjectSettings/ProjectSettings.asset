@@ -633,7 +633,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 9dfdaca5-49a1-44ae-968a-52c48a183847
   projectName: BlockedOut
   organizationId: deflatedpickle
