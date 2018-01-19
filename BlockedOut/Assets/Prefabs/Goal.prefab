@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1641380643664398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0203, y: 0.0101, z: 0}
+  m_LocalPosition: {x: 0.03, y: 0.01, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -171,7 +171,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -245,7 +245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be20d824aaeb5d409acae401b6c5280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: NewScene
   Wait: 50
   Text: {fileID: 0}
 --- !u!212 &212596603853196382

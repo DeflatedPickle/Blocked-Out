@@ -7,19 +7,25 @@ public class NextLevel : MonoBehaviour {
 	// public string Scene;
 	[Range(0, 100)]
 	public int Wait = 35;
-	public GameObject Text;
+	// public GameObject Text;
 
 	private int _count;
+	private static GameObject _textGameObject;
 	private TextMesh _text;
 	private AudioSource _exit;
 	private AudioSource _countSound;
 	private LevelManager _levelManager;
 
 	private void Awake() {
-		_text = Text.GetComponent<TextMesh>();
+		// _text = Text.GetComponent<TextMesh>();
 		_exit = GetComponents<AudioSource>()[0];
 		_countSound = GetComponents<AudioSource>()[1];
 		_levelManager = GameObject.Find("Manager").GetComponent<LevelManager>();
+	}
+
+	private void Start() {
+		_textGameObject = GameObject.Find("Player").transform.Find("Count").gameObject;
+		_text = _textGameObject.GetComponent<TextMesh>();
 	}
 
 	private void Update() {
@@ -46,14 +52,14 @@ public class NextLevel : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag("Player")) {
 			_count = 0;
-			Text.SetActive(true);
+			_textGameObject.SetActive(true);
 		}
 	}
 
 	private void OnTriggerExit2D(Collider2D other) {
 		if (other.gameObject.CompareTag("Player")) {
 			_count = 0;
-			Text.SetActive(false);
+			_textGameObject.SetActive(false);
 		}
 	}
 }
