@@ -38,7 +38,8 @@ public class LevelManager : MonoBehaviour {
 			_index += 1;
 
 			LevelList[_index].SetActive(true);
-			_spawnGameObject = GameObject.Find("LevelStack").transform.Find("Level" + (_index + 1)).transform.Find("Spawn").gameObject; // GameObject.Find("Level" + _index + "/Spawn");
+			
+			_spawnGameObject =  GameObject.Find("LevelStack").transform.Find("Level" + (_index + 1)).gameObject.transform.Find("Spawn").gameObject; // GameObject.Find("Level" + _index + "/Spawn");
 			// _player.transform.position = new Vector2(float.Parse(LevelSpawnList[_index].First().ToString()), float.Parse(LevelSpawnList[_index].Last().ToString()));
 			// _player.transform.position = new Vector2(SpawnXList[_index], SpawnYList[_index]);
 			_player.transform.position = _spawnGameObject.transform.position;
