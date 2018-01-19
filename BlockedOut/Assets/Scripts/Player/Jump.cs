@@ -35,7 +35,8 @@ public class Jump : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D other) {
 		if (!IsGrounded) {
-			_animationManager.Stretch(0.05f, 0.0f);
+			// _animationManager.Stretch(0.05f, 0.0f);
+			_animationManager.Set(0.9f, 0.9f);
 			_fall.Play();
 		}
 		
@@ -46,7 +47,8 @@ public class Jump : MonoBehaviour {
 
 	private void OnCollisionExit2D(Collision2D other) {
 		if (IsGrounded) {
-			_animationManager.Squash(0.05f, 0.0f);
+			// _animationManager.Squash(0.05f, 0.0f);
+			_animationManager.Set(0.8f, 0.9f);
 		}
 		
 		IsGrounded = false;
