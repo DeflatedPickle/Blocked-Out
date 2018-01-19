@@ -34,7 +34,8 @@ public class NextLevel : MonoBehaviour {
 		}
 		
 		if (other.gameObject.CompareTag("Player")) {
-			if (_count == Wait) {
+			if (_count >= Wait) {
+				_count = 0;
 				_exit.Play();
 				// SceneManager.LoadScene(Scene);
 				_levelManager.NextLevel();

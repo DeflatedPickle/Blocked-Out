@@ -18,6 +18,12 @@ public class LevelManager : MonoBehaviour {
 
 	public void NextLevel() {
 		if (_index < LevelList.Count - 1) {
+			GameObject.Find("LevelStack").GetComponent<RotationController>().DesiredRot = 0f;
+			
+			/*var rotation = GameObject.Find("LevelStack").transform.rotation;
+			rotation.z = 0f;
+			GameObject.Find("LevelStack").transform.rotation = rotation;*/
+			
 			LevelList[_index].SetActive(false);
 
 			_index += 1;

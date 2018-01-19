@@ -6,7 +6,7 @@ public class RotationController : MonoBehaviour {
 	// private RotationManager _rotationManager;
 	private AudioSource _audioSource;
 	
-	private float _desiredRot;
+	public float DesiredRot;
 	[Range(1, 8)]
 	public float Damping = 3;
 
@@ -16,21 +16,21 @@ public class RotationController : MonoBehaviour {
 	}
  
 	private void OnEnable() {
-		_desiredRot = transform.eulerAngles.z;
+		DesiredRot = transform.eulerAngles.z;
 	}
 
 	private void Update () {
 		if (Input.GetKeyDown(KeyCode.RightArrow)) {
 			// _rotationManager.RotateRight();
-			_desiredRot -= 90;
+			DesiredRot -= 90;
 			_audioSource.Play();
 		} else if (Input.GetKeyDown(KeyCode.LeftArrow)) {
 			// _rotationManager.RotateLeft();
-			_desiredRot += 90;
+			DesiredRot += 90;
 			_audioSource.Play();
 		}
  
-		var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, _desiredRot);
+		var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, DesiredRot);
 		transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, Time.deltaTime * Damping);
 	}
 }
