@@ -45,7 +45,7 @@ public class LevelManager : MonoBehaviour {
 			_player.transform.position = _spawnGameObject.transform.position;
 		}
 		else {
-			SceneManager.LoadScene("MainMenu");
+			SceneManager.LoadScene("Thanks");
 		}
 	}
 }
