@@ -11,9 +11,11 @@ public class LevelManager : MonoBehaviour {
 	private int _index;
 
 	private GameObject _player;
+	private GameObject _spawnGameObject;
 
 	private void Awake() {
 		_player = GameObject.Find("Player");
+		_spawnGameObject = GameObject.Find("LevelStack").transform.Find("Level4").transform.Find("Spawn").gameObject; // GameObject.Find("Level" + _index + "/Spawn");
 	}
 
 	public void NextLevel() {
@@ -30,7 +32,8 @@ public class LevelManager : MonoBehaviour {
 
 			LevelList[_index].SetActive(true);
 			// _player.transform.position = new Vector2(float.Parse(LevelSpawnList[_index].First().ToString()), float.Parse(LevelSpawnList[_index].Last().ToString()));
-			_player.transform.position = new Vector2(SpawnXList[_index], SpawnYList[_index]);
+			// _player.transform.position = new Vector2(SpawnXList[_index], SpawnYList[_index]);
+			_player.transform.position = _spawnGameObject.transform.position;
 		}
 		else {
 			SceneManager.LoadScene("MainMenu");
